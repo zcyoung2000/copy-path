@@ -1,0 +1,32 @@
+name: Build and test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  macos:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test path formatting
+        run: bash scripts/test.sh
+      - name: Build universal macOS app
+        run: bash scripts/build.sh
+      - name: Check architecture and signature
+        run: |
+          lipo 'build/Copy Path.app/Contents/MacOS/CopyPath' -verify_arch arm64
+          lipo 'build/Copy Path.app/Contents/MacOS/CopyPath' -verify_arch x86_64
+          codesign --verify --strict 'build/Copy Path.app'
+      - name: Package app
+        run: bash scripts/package.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Copy-Path-macOS
+          path: |
+            build/Copy-Path-*.zip
+            build/Copy-Path-*.sha256

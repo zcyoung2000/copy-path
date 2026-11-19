@@ -1,0 +1,13 @@
+pdf txt text log md markdown rtf rtfd doc docx docm dot dotx odt pages
+csv tsv xls xlsx xlsm xlsb ods numbers ppt pptx pptm odp key
+png jpg jpeg jpe gif webp heic heif avif tif tiff bmp ico icns svg eps ps ai psd raw dng
+mp3 m4a aac wav aiff aif flac ogg opus wma caf mid midi
+mp4 m4v mov mkv avi webm mpg mpeg ts m2ts 3gp flv wmv
+zip tar gz tgz bz2 tbz2 xz txz 7z rar zst dmg iso pkg deb rpm
+epub mobi azw azw3 fb2 cbz cbr
+html htm css scss sass less js jsx mjs cjs ts tsx vue svelte
+json jsonl xml yaml yml toml ini conf config properties plist strings env
+swift m mm h hh hpp c cc cpp rs go java kt kts py pyw rb php sh bash zsh fish
+sql sqlite sqlite3 db ipynb r R jl lua dart ex exs erl hrl clj cljs hs fs fsx cs vb
+wasm lock patch diff dockerfile makefile gradle cmake pem crt cer p12 pfx keychain
+sketch fig drawio mindmap mm torrent ics vcf webloc url shortcut
